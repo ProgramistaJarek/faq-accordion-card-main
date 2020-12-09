@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #6565e7;
+  background: linear-gradient(0deg, #6565e7 0%, #af67e9 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  background-color: white;
+  margin: 0 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+}
+section .woman {
+  position: relative;
+  top: -25%;
+  background: url("/images/bg-pattern-mobile.svg") no-repeat 50% 100%;
+}
+section .qustion {
+  font-family: "Kumbh Sans", sans-serif;
+  color: #1d1e35;
+  border-bottom: 1px solid black;
+}
+section .qustion h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+section .qustion p {
+  font-size: 12px;
+  font-weight: 400;
+}
+section .active h2 {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
