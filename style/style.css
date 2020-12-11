@@ -10,7 +10,7 @@
 }
 
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -26,30 +26,105 @@ section {
   background-color: white;
   margin: 0 1.5rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   position: relative;
 }
-section .woman {
-  position: relative;
-  top: -25%;
-  background: url("/images/bg-pattern-mobile.svg") no-repeat 50% 100%;
+section .woman-container {
+  position: absolute;
+  top: -2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-section .qustion {
+section .woman-container .woman {
+  background: url("/images/bg-pattern-mobile.svg") no-repeat bottom;
+}
+section .woman-container .woman img {
+  display: block;
+  margin: 0 auto;
+  transform: translateX(-15px);
+}
+section h1 {
+  text-align: center;
+  margin: 6rem 0 2rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 700;
+}
+section .question {
   font-family: "Kumbh Sans", sans-serif;
   color: #1d1e35;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #787887;
+  padding: 0.4rem 0;
 }
-section .qustion h2 {
+section .question h2 {
   font-size: 0.8rem;
   font-weight: 400;
   margin: 0.5rem 0;
+  position: relative;
 }
-section .qustion p {
+section .question h2:after {
+  content: "";
+  background: url("/images/icon-arrow-down.svg");
+  width: 10px;
+  height: 7px;
+  position: absolute;
+  right: 0;
+}
+section .question p {
   font-size: 12px;
   font-weight: 400;
+  color: #787887;
+  line-height: 1.1rem;
+  width: 85%;
+  display: none;
 }
 section .active h2 {
   font-weight: 700;
+}
+section .active h2:after {
+  transform: rotate(180deg);
+}
+section .active p {
+  display: block;
+}
+section .none p {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 4rem;
+  }
+  section .woman-container {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  section .woman-container .woman {
+    background: url("/images/bg-pattern-desktop.svg") no-repeat bottom;
+    width: 100%;
+    height: 100%;
+  }
+  section .woman-container .woman img {
+    display: block;
+    margin: 0 auto;
+    transform: translateX(-15px);
+  }
+  section h1 {
+    text-align: left;
+    font-size: 2rem;
+    margin: 2rem 0 2rem;
+  }
+  section .questions {
+    width: 40%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
